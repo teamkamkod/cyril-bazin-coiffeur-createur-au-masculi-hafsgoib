@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez Cyril Bazin Coiffeur Créateur AU MASCULIN à Nantes. Salon de coiffure expert, note 5/5, avis clients. Réservez en ligne au 02 40 40 01 88.">
+    <title>Cyril Bazin Coiffeur Créateur AU MASCULIN | Salon de coiffure à Nantes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1A1A1A;
+            --secondary: #C9A227;
+            --background: #F5F0E6;
+            --text: #1A1A1A;
+            --cta: #C9A227;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Outfit', sans-serif;
+            --radius: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            background-color: var(--background);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(26, 26, 26, 0.98);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--background);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 0.5rem;
+        }
+
+        .burger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav .logo {
+                font-size: 1.2rem;
+            }
+
+            .burger-menu {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: rgba(26, 26, 26, 0.99);
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+
+            nav ul.open {
+                display: flex;
+            }
+
+            nav ul li a {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.5) 100%), url('assets/hero.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            color: var(--background);
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-content .subheading {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-content .cta-button {
+            display: inline-block;
+            background-color: var(--cta);
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--cta);
+        }
+
+        .hero-content .cta-button:hover {
+            background-color: transparent;
+            color: var(--cta);
+        }
+
+        @media (max-width: 767px) {
+            #hero {
+                height: 80vh;
+                margin-top: 50px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content .subheading {
+                font-size: 1.1rem;
+            }
+
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Sections générales */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        section h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        section > p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: var(--text);
+            max-width: 800px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #apropos {
+            background-color: var(--background);
+        }
+
+        #apropos .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        #apropos .text-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        #apropos .text-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        #apropos .cta-button {
+            display: inline-block;
+            background-color: var(--cta);
+            color: var(--primary);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--cta);
+        }
+
+        #apropos .cta-button:hover {
+            background-color: transparent;
+            color: var(--cta);
+        }
+
+        @media (max-width: 1023px) {
+            #apropos .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Featured Menu */
+        #services {
+            background-color: #FAFAF8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--background);
+            padding: 2rem;
+            border: 1px solid #E8E3D8;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 8px 24px rgba(26, 26, 26, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid var(--secondary);
+            border-left: 2px solid var(--secondary);
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: -8px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 2px solid var(--secondary);
+            border-right: 2px solid var(--secondary);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Customer Reviews */
+        #avis {
+            background-color: var(--background);
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            background-color: #FAFAF8;
+            padding: 2rem;
+            border-left: 4px solid var(--secondary);
+            position: relative;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .review-card .icon-quote {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+
+        .review-card .stars {
+            display: flex;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-card .star {
+            color: var(--secondary);
+            font-size: 1rem;
+        }
+
+        .review-card .text {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .review-card .author {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .review-card .date {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 0.5rem;
+        }
+
+        /* Gallery Preview */
+        #galerie {
+            background-color: #FAFAF8;
+        }
+
+        .gallery-carousel {
+            position: relative;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 1rem 0;
+            scroll-snap-type: x mandatory;
+        }
+
+        .carousel-wrapper::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .carousel-wrapper::-webkit-scrollbar-track {
+            background: #E8E3D8;
+        }
+
+        .carousel-wrapper::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+        }
+
+        .gallery-item {
+            flex: 0 0 calc(100% - 1rem);
+            min-width: 300px;
+            height: 400px;
+            position: relative;
+            scroll-snap-align: start;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid var(--secondary);
+            border-left: 2px solid var(--secondary);
+            z-index: 10;
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: -8px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 2px solid var(--secondary);
+            border-right: 2px solid var(--secondary);
+            z-index: 10;
+        }
+
+        @media (max-width: 767px) {
+            .gallery-item {
+                flex: 0 0 calc(100% - 1rem);
+                height: 300px;
+            }
+        }
+
+        /* Hours & Location */
+        #horaires {
+            background-color: var(--background);
+        }
+
+        .hours-location-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table th,
+        .hours-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #E8E3D8;
+        }
+
+        .hours-table th {
+            background-color: #FAFAF8;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .hours-table td {
+            font-size: 0.95rem;
+        }
+
+        .location-info {
+            background-color: #FAFAF8;
+            padding: 2rem;
+        }
+
+        .location-info p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .location-info strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .map-container {
+            margin-top: 2rem;
+            border: 1px solid #E8E3D8;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 1023px) {
+            .hours-location-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Contact Form */
+        #contact {
+            background-color: #FAFAF8;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #E8E3D8;
+            background-color: var(--background);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            background-color: var(--cta);
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--cta);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-body);
+        }
+
+        .form-submit:hover {
+            background-color: transparent;
+            color: var(--cta);
+        }
+
+        /* Trust Signals */
+        #confiance {
+            background-color: var(--background);
+        }
+
+        .trust-signals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .trust-signal {
+            text-align: center;
+            padding: 2rem;
+            background-color: #FAFAF8;
+            border: 1px solid #E8E3D8;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .trust-signal-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .trust-signal h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .trust-signal p {
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--background);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--background);
+        }
+
+        /* Responsive */
+        @media (max-width: 767px) {
+            section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews-container {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-signals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Cyril Bazin</a>
+        <ul id="nav-menu">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#avis">Avis</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#horaires">Horaires</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Cyril Bazin Coiffeur Créateur AU MASCULIN</h1>
+            <p class="subheading">Salon de coiffure et barbier à Nantes</p>
+            <p>Situé au 2 Rue de la Méthode, 44100 Nantes, notre salon vous accueille dans un cadre agréable pour des prestations de coiffure et de barbier haut de gamme. Avec une note exceptionnelle de 5/5 et plus de 278 avis clients, nous mettons notre expertise à votre service.</p>
+            <a href="#contact" class="cta-button">Réserver en ligne</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos">
+        <div class="container">
+            <div class="text-content">
+                <h2>À propos de notre salon</h2>
+                <p>Cyril Bazin Coiffeur Créateur AU MASCULIN est un salon de coiffure et barbier situé à Nantes. Nous sommes spécialisés dans la coiffure masculine et proposons également des produits de barbier. Notre équipe, composée de professionnels passionnés comme Alex et Corentin, est reconnue pour son accueil sympathique et son savoir-faire. Nous offrons un service personnalisé et de qualité, dans un cadre chaleureux et moderne.</p>
+                <a href="#services" class="cta-button">Découvrir nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Menu / Services -->
+    <section id="services">
+        <div class="container">
+            <h2>Nos prestations</h2>
+            <p>Nous proposons une large gamme de services de coiffure et de barbier pour hommes. Que vous souhaitiez une coupe classique, un style tendance ou un entretien de barbe, notre équipe saura répondre à vos attentes avec précision et créativité.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Coupe homme</h3>
+                    <p>Coupe adaptée à votre style et à la forme de votre visage, réalisée par nos coiffeurs experts.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Taille de barbe</h3>
+                    <p>Soin et taille de barbe pour un rendu net et élégant.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Shampoing soin</h3>
+                    <p>Shampoing et soin pour des cheveux sains et brillants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section id="avis">
+        <div class="container">
+            <h2>Ils nous font confiance</h2>
+            <p>La satisfaction de nos clients est notre priorité. Voici quelques avis récents :</p>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="icon-quote">❝</div>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text">Merci d'avoir sauvé la tête de mon fils !!! Enfin un coiffeur qui a réussi à lui faire une coupe digne de ce nom ! Et au passage, les brownies de la fermette sont effectivement incroyable 😁! Merci Alex !</p>
+                    <p class="author">Audrey Blondeau</p>
+                    <p class="date">il y a une semaine</p>
+                </div>
+                <div class="review-card">
+                    <div class="icon-quote">❝</div>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text">Accueil sympathique. Cadre agréable Pratique pour réserver via le web. Pas de difficulté pour se garer</p>
+                    <p class="author">Romuald Lerouge</p>
+                    <p class="date">il y a moins d'une semaine</p>
+                </div>
+                <div class="review-card">
+                    <div class="icon-quote">❝</div>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text">Super !!!! Vraiment pro et patient. Je recommande vivement. Merci Corentin.</p>
+                    <p class="author">Biskra Wesh We Can</p>
+                    <p class="date">il y a 3 semaines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section id="galerie">
+        <div class="container">
+            <h2>Notre univers</h2>
+            <p>Découvrez l'ambiance de notre salon et quelques-unes de nos réalisations.</p>
+            <div class="gallery-carousel">
+                <div class="carousel-wrapper" id="carousel">
+                    <div class="gallery-item">
+                        <img src="assets/hero.jpg" alt="Ambiance du salon Cyril Bazin">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/gallery-1.jpg" alt="Détail coupe homme">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/gallery-2.jpg" alt="Réalisation barbier">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Location -->
+    <section id="horaires">
+        <div class="container">
+            <h2>Horaires et accès</h2>
+            <div class="hours-location-container">
+                <div>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 1rem; color: var(--primary);">Horaires d'ouverture</h3>
+                    <table class="hours-table">
+                        <thead>
+                            <tr>
+                                <th>Jour</th>
+                                <th>Horaires</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lundi</td>
+                                <td>09:00 – 19:00</td>
+                            </tr>
+                            <tr>
+                                <td>Mardi</td>
+                                <td>08:00 – 20:00</td>
+                            </tr>
+                            <tr>
+                                <td>Mercredi</td>
+                                <td>08:00 – 20:00</td>
+                            </tr>
+                            <tr>
+                                <td>Jeudi</td>
+                                <td>08:00 – 20:00</td>
+                            </tr>
+                            <tr>
+                                <td>Vendredi</td>
+                                <td>08:00 – 20:00</td>
+                            </tr>
+                            <tr>
+                                <td>Samedi</td>
+                                <td>08:00 – 17:00</td>
+                            </tr>
+                            <tr>
+                                <td>Dimanche</td>
+                                <td>Fermé</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="location-info">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 1rem; color: var(--primary);">Localisation</h3>
+                    <p><strong>Adresse :</strong><br>2 Rue de la Méthode, 44100 Nantes, France</p>
+                    <p><strong>Téléphone :</strong><br><a href="tel:+33240400188">+33 2 40 40 01 88</a></p>
+                    <p><strong>Accès :</strong><br>Parking facile à proximité. Accueil sans rendez-vous possible.</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.8234567890123!2d-1.5574!3d47.2173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805a51234567%3A0x1234567890abcdef!2s2%20Rue%20de%20la%20M%C3%A9thode%2C%2044100%20Nantes!5e0!3m2!1sfr!2sfr!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute demande de rendez-vous ou d'information, n'hésitez pas à nous contacter via le formulaire ci-dessous ou par téléphone au +33 2 40 40 01 88.</p>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service demandé</label>
+                    <input type="text" id="service" name="service" placeholder="Ex: Coupe homme, Taille de barbe...">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section id="confiance">
+        <div class="container">
+            <h2>Pourquoi nous choisir ?</h2>
+            <p>Note moyenne de 5/5 basée sur 278 avis clients. Réservation en ligne pratique. Stationnement facile. Accueil chaleureux et professionnalisme garanti.</p>
+            <div class="trust-signals-grid">
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">✓</div>
+                    <h3>Accueil sans rendez-vous</h3>
+                    <p>Possible selon disponibilités</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">⭐</div>
+                    <h3>Produits professionnels</h3>
+                    <p>Utilisés pour tous nos services</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">💳</div>
+                    <h3>Paiement par carte</h3>
+                    <p>Accepté pour votre commodité</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">🅿️</div>
+                    <h3>Proche parking</h3>
+                    <p>Stationnement facile à proximité</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">👥</div>
+                    <h3>Équipe expérimentée</h3>
+                    <p>Professionnels passionnés</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">🤝</div>
+                    <h3>Ambiance conviviale</h3>
+                    <p>Accueil chaleureux garanti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Cyril Bazin Coiffeur Créateur AU MASCULIN. Tous droits réservés.</p>
+        <p>2 Rue de la Méthode, 44100 Nantes | Tél : <a href="tel:+33240400188">+33 2 40 40 01 88</a></p>
+        <p><a href="#">Mentions légales</a></p>
+    </footer>
+
+    <script>
+        // Burger menu toggle
+        const burgerMenu = document.getElementById('burger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and review cards
+        document.querySelectorAll('.service-card, .review-card, .trust-signal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
